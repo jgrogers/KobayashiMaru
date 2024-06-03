@@ -326,9 +326,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5390341037972632527}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0.5
-  m_AngularDrag: 0.2
+  m_Mass: 0.5
+  m_Drag: 0.3
+  m_AngularDrag: 0.1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -385,6 +385,7 @@ MonoBehaviour:
   explosionSounds:
   - {fileID: 8300000, guid: a5236a805eafb7e4ab1275ebd504ff70, type: 3}
   - {fileID: 8300000, guid: bef7304488a7eae478995c11ac9767d6, type: 3}
+  origin: {fileID: 0}
   mLifespan: 5
   m_ArmedCount: 0
   m_ArmingTime: 0.5
@@ -408,6 +409,7 @@ MonoBehaviour:
   Kd: 4
   rotationTorque: 10
   thrust: 5
+  team: -1
 --- !u!114 &47209268544384451
 MonoBehaviour:
   m_ObjectHideFlags: 0

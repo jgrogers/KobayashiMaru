@@ -24,6 +24,10 @@ public class EscManager : MonoBehaviour
             {
                 SceneManager.LoadScene(1);
             }
+            if (keyboard.escapeKey.isPressed)
+            {
+                Application.Quit();
+            }
         }
         if (mouse != null)
         {

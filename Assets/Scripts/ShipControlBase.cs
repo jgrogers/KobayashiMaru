@@ -45,7 +45,7 @@ public class ShipControlBase : MonoBehaviour
     {
         UpdateShipLevel(shipLevel + 1);
     }
-    public void UpdateShipLevel(float newShipLevel)
+     public void UpdateShipLevel(float newShipLevel)
     {
         shipLevel = newShipLevel;
         float laserRange = 60.0f * (1.0f + shipLevel / 5f);

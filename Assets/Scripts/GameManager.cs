@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
             GameObject ship = shipteam.gameObject;
             NotifyShipCreated(ship);
         }
+        if (playerShip != null)
+            UITextUpdater.Instance.SetLevel(playerShip.GetComponent<ShipControlBase>().shipLevel);
     }
     private void FixedUpdate()
     {
@@ -86,6 +88,7 @@ public class GameManager : MonoBehaviour
                         else newcent = new Vector3(0, 0, 0);
                         GameObject ship = Instantiate(prefab, newcent + new Vector3(instance_offset.y, 0.0f, instance_offset.x), Quaternion.identity);
                         ship.GetComponent<ShipTeam>().team = 1;
+                        ship.GetComponent<ShipControlBase>().shipLevel = GameSettings.Instance.EnemyShipLevel;
                         NotifyShipCreated(ship);
                     }
                 }

@@ -10,6 +10,7 @@ public class GameSettings : MonoBehaviour
     public float ProbabilityOfSpawn { get; private set; } = 0.0f;
     public int WaveSizeMin { get; private set; } = 0;
     public int WaveSizeMax { get; private set; } = 1;
+    public float EnemyShipLevel { get; private set; } = 1f;
     public float SpawnInterval { get; private set; } = 30.0f;
 
     [SerializeField] private float initialDifficulty = 0;
@@ -36,6 +37,7 @@ public class GameSettings : MonoBehaviour
         WaveSizeMin = (int)Mathf.Floor(1f + difficulty);
         WaveSizeMax = (int)Mathf.Floor(1f + difficulty * 1.5f);
         SpawnInterval = difficulty >= 1f ? Mathf.Clamp(60.0f / Mathf.Pow(difficulty, 1f / 6f), 0.0f, 60.0f) : 60f;
+        EnemyShipLevel = 1f + difficulty / 2.0f;
         Debug.Log("The difficulty is now " + difficulty +
             " Prob of spawn : " + ProbabilityOfSpawn +
             "Wave size [" + WaveSizeMin + ", " + WaveSizeMax +
