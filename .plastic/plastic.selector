@@ -1,0 +1,4 @@
+repository "KobayashiMaru@PromptCritical@cloud"
+  path "/"
+    br "/main"
+    co "/main"
